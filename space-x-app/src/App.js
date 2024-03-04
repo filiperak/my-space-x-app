@@ -9,12 +9,16 @@ import LaunchesContextProvider from "./context/LaunchesContext";
 import LaunchView from "./components/views/LaunchView";
 import RocketContextProvider from "./context/RocketContext";
 import RocketView from "./components/views/RocketView";
+import ShipView from "./components/views/ShipsView";
+import ShipsContextProvider from "./context/ShipsContext";
+
 function App() {
   return (
     <div className="App">
       <Router>
         <LaunchesContextProvider>
         <RocketContextProvider>
+        <ShipsContextProvider>
           <div className="view-wrapper">
             <Navbar />
             <Routes>
@@ -23,9 +27,11 @@ function App() {
               <Route path="/rockets" element={<RocketsView />} />
               <Route path="/rockets/:rocketId" element={<RocketView />} />
               <Route path="/ships" element={<ShipsView />} />
+              <Route path="/ships/:shipId" element={<ShipView />} />
               <Route path="/" element={<HomeView />} />
             </Routes>
           </div>
+        </ShipsContextProvider>
         </RocketContextProvider>
         </LaunchesContextProvider>
       </Router>
