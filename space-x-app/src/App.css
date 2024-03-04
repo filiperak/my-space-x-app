@@ -25,3 +25,6 @@ a{
   background-color: rgb(10, 10, 234);
   cursor: pointer;
 }
+img{
+  max-width: 50vw;
+}

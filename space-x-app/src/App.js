@@ -9,7 +9,7 @@ import LaunchesContextProvider from "./context/LaunchesContext";
 import LaunchView from "./components/views/LaunchView";
 import RocketContextProvider from "./context/RocketContext";
 import RocketView from "./components/views/RocketView";
-import ShipView from "./components/views/ShipsView";
+import ShipView from "./components/views/ShipView";
 import ShipsContextProvider from "./context/ShipsContext";
 
 function App() {

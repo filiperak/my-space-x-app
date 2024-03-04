@@ -63,8 +63,9 @@ const ShipsView = () => {
     console.log("ovde je trigerovan fetch");
     dispatch({ type: "FETCH_SHIPS_REQUEST" });
     instance
-      .get("/launches")
+      .get("/ships")
       .then((res) => {
+        console.log(res);
         dispatch({
           type: "FETCH_SHIPS_SUCCESS",
           payload: res.data.slice(0, 10),

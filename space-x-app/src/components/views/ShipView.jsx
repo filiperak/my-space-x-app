@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import instance from "../../services/api";
-import { LaunchesContext } from "../../context/LaunchesContext";
+import { ShipsContext } from "../../context/ShipsContext";
 import Loading from "../loading/Loading";
 
-const LaunchView = () => {
+const ShipView = () => {
   const [ship, setShip] = useState(null);
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const LaunchView = () => {
       {ship? (
         <>
         <h3>{ship.name}</h3>
-        <img src={ship.links.patch.small} alt={ship.name} />
+        <img src={ship.image} alt={ship.name} />
         <p>{ship.details}</p>
         </>
       ) : (
@@ -34,4 +34,4 @@ const LaunchView = () => {
   );
 };
 
-export default LaunchView;
+export default ShipView;
