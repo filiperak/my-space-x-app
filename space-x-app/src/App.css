@@ -16,3 +16,12 @@ a{
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+.back-btn{
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 8vh;
+  font-size: 1.5em;
+  background-color: rgb(10, 10, 234);
+  cursor: pointer;
+}

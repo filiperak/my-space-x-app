@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate, Navigate } from "react-router-dom";
 import instance from "../../services/api";
 import { LaunchesContext } from "../../context/LaunchesContext";
+import Loading from "../loading/Loading";
 
 const LaunchView = () => {
   const [launch, setLaunch] = useState(null);
@@ -27,9 +28,16 @@ const LaunchView = () => {
 
   return (
     <div>
-      <button onClick={backBtn}>back to launches</button>
-      LaunchView single
-      {/* {launch.name} */}
+      {launch? (
+        <>
+        <h3>{launch.name}</h3>
+        <img src={launch.links.patch.small} alt={launch.name} />
+        <p>{launch.details}</p>
+        </>
+      ) : (
+        <Loading/>
+      )}
+      <button onClick={backBtn} className="back-btn">back to launches</button>
     </div>
   );
 };
