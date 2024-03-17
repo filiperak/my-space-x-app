@@ -21,7 +21,7 @@ const Company = ({ companyInfo }) => {
           <h4>Links:</h4>
           {Object.keys(companyInfo.links).map((key) => (
             <div key={key}>
-              <a href={companyInfo.links[key]}>{companyInfo.links[key]}</a>
+              <a href={companyInfo.links[key]} target="_blank">{companyInfo.links[key]}</a>
             </div>
           ))}
         </div>
